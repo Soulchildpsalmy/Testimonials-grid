@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%; /* Ensure full width */
+    max-width: 1200px;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.testimonial-card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.testimonial-card .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.testimonial-card .header p {
+    margin: 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.daniel {
+    background-color: #7541c8;
+    color: white;
+    grid-area: daniel;
+}
+
+.jonathan {
+    background-color: #48556a;
+    color: white;
+    grid-area: jonathan;
+}
+
+.jeanette {
+    background-color: #fff;
+    color: #48556a;
+    grid-area: jeanette;
+}
+
+.patrick {
+    background-color: #1b243e;
+    color: white;
+    grid-area: patrick;
+}
+
+.kira {
+    background-color: #fff;
+    color: #48556a;
+    grid-area: kira;
+}
+
+.testimonial-card blockquote {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.testimonial-card blockquote:before {
+    content: '“';
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        grid-template-areas: 
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira";
+        grid-template-columns: 1fr;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .testimonial-card {
+        width: 100%; /* Full width on mobile */
+    }
+}
