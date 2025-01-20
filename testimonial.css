@@ -16,9 +16,9 @@ body {
         "jeanette patrick patrick kira";
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%; /* Ensure full width */
+    width: 100%;
     max-width: 1200px;
-    padding: 20px; /* Add padding for smaller screens */
+    padding: 20px;
 }
 
 .testimonial-card {
@@ -54,7 +54,11 @@ body {
 }
 
 .daniel {
-    background-color: #7541c8;
+    background-color: #7541c8; /* Maintain the background color */
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    background-position: top right 80px; /* Adjust the position */
+    background-size:100px auto; /* Keep the natural size of the image */
     color: white;
     grid-area: daniel;
 }
@@ -111,10 +115,10 @@ body {
             "patrick"
             "kira";
         grid-template-columns: 1fr;
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px;
     }
 
     .testimonial-card {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
     }
 }
